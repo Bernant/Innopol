@@ -1,0 +1,14 @@
+import numpy as np
+import pandas as pd
+url ='https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
+d = np.genfromtxt(url, delimiter=',', dtype='str')
+a=d[:,0].astype('float')
+b=d[:,1].astype('float')
+c=d[:,2].astype('float')
+e=d[:,3].astype('float')
+print('median', np.median(a),np.median(b),np.median(c),np.median(e))
+print('min', np.min(a),np.min(b),np.min(c),np.min(e))
+print('max', np.max(a),np.max(b),np.max(c),np.max(e))
+print('mean', np.mean(a),np.mean(b),np.mean(c),np.mean(e))
+print('percentile,25', np.percentile(a,25),np.percentile(b,25),np.percentile(c,25),np.percentile(e,25))
+print('percentile,75', np.percentile(a,75),np.percentile(b,75),np.percentile(c,75),np.percentile(e,75))
